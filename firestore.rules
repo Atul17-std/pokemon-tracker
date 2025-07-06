@@ -1,0 +1,11 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allows anyone to read, write, and delete data.
+    // WARNING: NOT RECOMMENDED FOR PRODUCTION.
+    // Change this when you implement user authentication.
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

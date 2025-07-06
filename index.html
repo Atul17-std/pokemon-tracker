@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Progress Tracker - BATTLE INSTITUTE OF TECHNOLOGY</title>
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="bg-yellow-100 min-h-screen">
+    <div id="app">
+        <!-- Loading overlay will be shown while app initializes -->
+        <div id="loading-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="pokeball animate-spin"></div>
+            <p class="ml-4 text-white pokemon-font">LOADING POKEDEX DATA...</p>
+        </div>
+        
+        <!-- Main app content will be rendered here -->
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+
+    <!-- App scripts (loaded in order) -->
+    <script src="scripts/config.js" type="module"></script>
+    <script src="scripts/firebase.js" type="module"></script>
+    <script src="scripts/syllabus.js" type="module"></script>
+    <script src="scripts/utils.js" type="module"></script>
+    <script src="scripts/app.js" type="module"></script>
+</body>
+</html>

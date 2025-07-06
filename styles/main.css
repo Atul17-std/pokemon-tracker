@@ -1,0 +1,48 @@
+/* Custom styles that aren't covered by Tailwind */
+.pokemon-font {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pokeball {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to bottom, #ff1c1c 50%, #ffffff 50%);
+    border-radius: 50%;
+    border: 3px solid black;
+    position: relative;
+}
+
+.pokeball::after {
+    content: "";
+    position: absolute;
+    top: 46%;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: black;
+}
+
+/* Animations */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Progress bars */
+.progress-bar {
+    transition: width 0.5s ease-in-out;
+}
+
+/* Pokemon card hover effects */
+.pokemon-card {
+    transition: all 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
